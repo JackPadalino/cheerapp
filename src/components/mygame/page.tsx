@@ -1,12 +1,19 @@
 'use client';
 
-import { useState } from 'react';
+import { useState,useContext } from 'react';
 import { doc, updateDoc, increment } from 'firebase/firestore';
 import { db } from '@/lib/firebase/config';
+import { UserContext, UserContextType } from '@/context/UserContext';
 
 import styles from './styles.module.css';
 
 export default function MyGame() {
+  // context variables
+    const { signedIn,setSignedIn,profile,setProfile } = useContext(
+      UserContext
+    ) as UserContextType;
+  
+    // local state variables
   const [loading, setLoading] = useState(false);
 
   const docId = 'MacMBVE25HNMU5HE7LKr'; // document ID
@@ -27,9 +34,11 @@ export default function MyGame() {
     setLoading(false);
   };
 
+
   return (
     <div className={styles.mainContainer}>
-      <div className={styles.controlsContainer}>
+      {!signedIn ? <p>Please sign in to view this page...</p> 
+      : <div className={styles.controlsContainer}>
         <div className={styles.buttonsContainer}>
           <p>Team 1 Score</p>
           <button
@@ -83,6 +92,8 @@ export default function MyGame() {
           </button>
         </div>
       </div>
+      }
+      
     </div>
-  );
+    )
 }

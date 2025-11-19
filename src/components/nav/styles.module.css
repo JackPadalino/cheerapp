@@ -12,26 +12,13 @@
 
 /* css for all views  */
 .mainContainer {
-  padding: 20px;
-  display: flex;
-  /* justify-content: center; */
-  width: 100%;
-  height: 100vh;
+    display:flex;
+    gap:10px;
+    justify-content: flex-end;
+    padding:20px 10px 20px 10px;
+    border-bottom: 1px solid lightgray;
 }
 
-.controlsContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.buttonsContainer {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.btn {
-  width: 25px;
-  height: 25px;
+.navItem{
+    font-family: arial;
 }

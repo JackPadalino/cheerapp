@@ -19,28 +19,20 @@
   height: 100vh;
 }
 
-.singleCompContainer {
+.form {
   display: flex;
+  flex-direction: column;
+  width:25%;
   gap: 20px;
 }
 
-.teamContainer {
+.buttonsContainer {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  gap: 10px;
 }
 
-.teamName,
-.teamScore {
-  padding: 0px;
-  margin: 0px;
-}
-
-.teamName {
-  font-size: 50px;
-  text-decoration: underline;
-}
-
-.teamScore {
-  font-size: 100px;
+.btn {
+  width: 25px;
+  height: 25px;
 }

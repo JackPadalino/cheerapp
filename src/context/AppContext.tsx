@@ -1,13 +1,13 @@
 import React, { FC } from 'react';
+import { UserContextProvider } from './UserContext';
 
 const AppContextProvider: FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   return (
-
-                          {children}
-                    
-  
+    <UserContextProvider>
+        {children}
+    </UserContextProvider>              
   );
 };
 
