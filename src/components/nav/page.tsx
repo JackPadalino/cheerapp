@@ -21,7 +21,6 @@ export default function Nav(){
   ) as UserContextType;
   const router = useRouter();
 
-
   const handleSignOut = () => {
     signOut(auth)
       .then(() => {
@@ -39,8 +38,8 @@ export default function Nav(){
     <div className={styles.mainContainer}>
       {!signedIn ? (
         <>
-            <Link href="/" className={styles.navItem}>Home</Link>
-            <Link href="/login" className={styles.navItem}>Login</Link>
+          <Link href="/" className={styles.navItem}>Home</Link>
+          <Link href="/login" className={styles.navItem}>Login</Link>
         </>
       ) : (
         <>
