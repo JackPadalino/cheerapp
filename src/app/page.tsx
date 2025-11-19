@@ -33,22 +33,21 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
-      <h1>Cheer App!</h1>
+    <div className={styles.mainContainer}>
       {loading ? (
         <p>Loading...</p>
       ) : (
-        <div>
+        <div className={styles.allCompsContainer}>
           {competitions.map((comp) => (
-            <div key={comp.id}>
-              <p>
-                <strong>Team:</strong> {comp.team1Name} <strong>Score:</strong>{' '}
-                {comp.team1Score}
-              </p>
-              <p>
-                <strong>Team:</strong> {comp.team2Name} <strong>Score:</strong>{' '}
-                {comp.team2Score}
-              </p>
+            <div key={comp.id} className={styles.singleCompContainer}>
+              <div className={styles.teamContainer}>
+                <p className={styles.teamName}>{comp.team1Name}</p>
+                <p className={styles.teamScore}>{comp.team1Score}</p>
+              </div>
+              <div className={styles.teamContainer}>
+                <p className={styles.teamName}>{comp.team2Name}</p>
+                <p className={styles.teamScore}>{comp.team2Score}</p>
+              </div>
             </div>
           ))}
         </div>
