@@ -13,7 +13,11 @@
 /* css for all views  */
 /* .mainContainer {} */
 
-.controls {
+.mainContainer {
+  padding: 20px;
+}
+
+.controlsContainer {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -23,4 +27,9 @@
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.btn {
+  width: 25px;
+  height: 25px;
 }

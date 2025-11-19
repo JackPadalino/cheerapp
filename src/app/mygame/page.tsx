@@ -29,13 +29,13 @@ export default function MyGame() {
 
   return (
     <div className={styles.mainContainer}>
-      <h1 className={styles.pageName}>My Game</h1>
-      <div className={styles.controls}>
+      <div className={styles.controlsContainer}>
         <div className={styles.buttonsContainer}>
           <p>Team 1 Score</p>
           <button
             onClick={() => updateScore('team1Score', 1)}
             disabled={loading}
+            className={styles.btn}
           >
             +
           </button>
@@ -43,6 +43,7 @@ export default function MyGame() {
           <button
             onClick={() => updateScore('team1Score', -1)}
             disabled={loading}
+            className={styles.btn}
           >
             -
           </button>
@@ -52,12 +53,31 @@ export default function MyGame() {
           <button
             onClick={() => updateScore('team2Score', 1)}
             disabled={loading}
+            className={styles.btn}
           >
             +
           </button>
           <button
             onClick={() => updateScore('team2Score', -1)}
             disabled={loading}
+            className={styles.btn}
+          >
+            -
+          </button>
+        </div>
+        <div className={styles.buttonsContainer}>
+          <p>Something else</p>
+          <button
+            onClick={() => alert('This doest do anything yet...')}
+            disabled={loading}
+            className={styles.btn}
+          >
+            +
+          </button>
+          <button
+            onClick={() => alert('This doest do anything yet...')}
+            disabled={loading}
+            className={styles.btn}
           >
             -
           </button>
