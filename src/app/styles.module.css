@@ -13,14 +13,6 @@
 /* css for all views  */
 /* .mainContainer {} */
 
-.controls {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.buttonsContainer {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.teamText {
+  font-size:30px
 }

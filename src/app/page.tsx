@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { collection, onSnapshot } from 'firebase/firestore';
 import { db } from '@/lib/firebase/config';
+import styles from './styles.module.css';
 
 export default function Home() {
   const [loading, setLoading] = useState<boolean>(true);

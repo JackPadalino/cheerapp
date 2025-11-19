@@ -31,33 +31,35 @@ export default function MyGame() {
     <div className={styles.mainContainer}>
       <h1 className={styles.pageName}>My Game</h1>
       <div className={styles.controls}>
-        <div className={styles.buttons}>
+        <div className={styles.buttonsContainer}>
+          <p>Team 1 Score</p>
           <button
             onClick={() => updateScore('team1Score', 1)}
             disabled={loading}
           >
-            Increase Team 1 Score
+            +
           </button>
 
           <button
             onClick={() => updateScore('team1Score', -1)}
             disabled={loading}
           >
-            Decrease Team 1 Score
+            -
           </button>
         </div>
-        <div className={styles.buttons}>
+        <div className={styles.buttonsContainer}>
+          <p>Team 2 Score</p>
           <button
             onClick={() => updateScore('team2Score', 1)}
             disabled={loading}
           >
-            Increase Team 1 Score
+            +
           </button>
           <button
             onClick={() => updateScore('team2Score', -1)}
             disabled={loading}
           >
-            Decrease Team 2 Score
+            -
           </button>
         </div>
       </div>
